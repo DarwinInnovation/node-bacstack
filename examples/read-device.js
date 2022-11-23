@@ -447,7 +447,7 @@ if (process.argv.length === 3) {
   }
 }
 // create instance of Bacnet
-const bacnetClient = new Bacnet({apduTimeout: 4000, interface: '0.0.0.0'});
+const bacnetClient = new Bacnet({apduTimeout: 4000, interface: '0.0.0.0', broadcastSocket: true, port: 0});
 
 // emitted for each new message
 bacnetClient.on('message', (msg, rinfo) => {
